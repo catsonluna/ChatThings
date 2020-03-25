@@ -25,5 +25,5 @@ public class ChatThings {
         MinecraftForge.EVENT_BUS.register(Sneak);
         MinecraftForge.EVENT_BUS.register(Drop);
     }
-//discord push test
+//discord push test 2
 }
