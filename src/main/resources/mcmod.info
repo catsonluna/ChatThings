@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ChatThings",
+  "name": "ChatThings",
+  "description": "Makes you do stuff if you or someone else types something in the chat.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Pinkulu"],
+  "credits": "To pinkulu bc hes cool",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
