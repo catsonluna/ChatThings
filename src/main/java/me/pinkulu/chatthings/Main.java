@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 public class Main {
 
      static final String MODID = "ChatThings";
-     static final String VERSION = "1.0 - snapshot";
+     static final String VERSION = "1.0";
      static final String NAME = "ChatThings";
      static final String acceptedMineshaftVersions = "[1.8.9]";
 
