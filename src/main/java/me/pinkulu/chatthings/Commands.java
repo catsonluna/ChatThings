@@ -7,12 +7,12 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.event.HoverEvent;
 import net.minecraft.util.*;
+import me.pinkulu.chatthings.Util;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Commands extends CommandBase {
-public static String replace(String text){return text.replaceAll("&", "§");}
+public class Commands extends CommandBase{
 
 
     @Override
@@ -29,6 +29,7 @@ public static String replace(String text){return text.replaceAll("&", "§");}
     public List<String> getCommandAliases() {
         List<String> commandAliases = new ArrayList<String>();
         commandAliases.add("chatTHelp");
+        commandAliases.add("cth");
         return commandAliases;
     }
 
@@ -37,8 +38,16 @@ public static String replace(String text){return text.replaceAll("&", "§");}
             EntityPlayer player = (EntityPlayer) sender;
             ChatStyle style = new ChatStyle();
 
-            style.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText(replace("&3this &4is &2a &5test"))));
-            IChatComponent text = new ChatComponentText("hover me").setChatStyle(style);
+            style.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText(Util.replace(
+                       " &1Movement: " +
+                            "\n &9front, &9back, &9left, right " +
+                            "\n &1Actions: " +
+                            "\n &9Jump, sneak, useitem, drop" +
+                            "\n &1Extra:" +
+                            "\n &4crash" +
+                            "\n &5Mod made by:" +
+                            "\n &dPinkulu"))));
+            IChatComponent text = new ChatComponentText(Util.replace("&6v1.0&0&o(hoverable text)")).setChatStyle(style);
             player.addChatMessage(text);
         
 
@@ -61,6 +70,11 @@ public static String replace(String text){return text.replaceAll("&", "§");}
 
     @Override
     public int compareTo(ICommand o) {
+        return 0;
+    }
+
+    @Override
+    public int getRequiredPermissionLevel() {
         return 0;
     }
 }

@@ -45,7 +45,7 @@ task moveResources {
 
 moveResources.dependsOn processResources
 classes.dependsOn moveResources
-
+compileJava.options.encoding = 'UTF-8'
 dependencies {
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
