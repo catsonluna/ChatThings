@@ -1,20 +1,18 @@
 package me.pinkulu.chatthings;
 
+import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.event.HoverEvent;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.IChatComponent;
+import net.minecraft.util.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Commands implements ICommand {
-
+public class Commands extends CommandBase {
+public static String replace(String text){return text.replaceAll("&", "§");}
 
 
     @Override
@@ -36,13 +34,12 @@ public class Commands implements ICommand {
 
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
-        if (sender instanceof EntityPlayer){
             EntityPlayer player = (EntityPlayer) sender;
             ChatStyle style = new ChatStyle();
-            style.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("This is a test")));
+
+            style.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText(replace("&3this &4is &2a &5test"))));
             IChatComponent text = new ChatComponentText("hover me").setChatStyle(style);
             player.addChatMessage(text);
-        }
         
 
     }
