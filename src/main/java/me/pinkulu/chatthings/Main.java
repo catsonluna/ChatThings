@@ -33,6 +33,6 @@ public class Main {
         MinecraftForge.EVENT_BUS.register(left);
         MinecraftForge.EVENT_BUS.register(right);
         MinecraftForge.EVENT_BUS.register(useItem);
-        ClientCommandHandler.instance.registerCommand(new Command());
+        ClientCommandHandler.instance.registerCommand(new HelpCommand());
     }
 }

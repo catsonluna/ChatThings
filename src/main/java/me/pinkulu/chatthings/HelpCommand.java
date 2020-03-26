@@ -12,7 +12,7 @@ import me.pinkulu.chatthings.Util;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Command extends CommandBase{
+public class HelpCommand extends CommandBase{
 
 
     @Override
