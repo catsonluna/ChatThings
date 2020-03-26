@@ -12,7 +12,7 @@ import me.pinkulu.chatthings.Util;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Commands extends CommandBase{
+public class Command extends CommandBase{
 
 
     @Override
@@ -43,11 +43,10 @@ public class Commands extends CommandBase{
                             "\n &9front, &9back, &9left, right " +
                             "\n &1Actions: " +
                             "\n &9Jump, sneak, useitem, drop" +
-                            "\n &1Extra:" +
-                            "\n &4crash" +
+                            "\n &4More coming soon" +
                             "\n &5Mod made by:" +
                             "\n &dPinkulu"))));
-            IChatComponent text = new ChatComponentText(Util.replace("&6v1.0&0&o(hoverable text)")).setChatStyle(style);
+            IChatComponent text = new ChatComponentText(Util.replace("&6v1.0&8&o(hoverable text)")).setChatStyle(style);
             player.addChatMessage(text);
         
 
