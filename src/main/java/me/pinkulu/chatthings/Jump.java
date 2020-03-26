@@ -6,9 +6,12 @@ import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+
+
 public class Jump {
     private boolean jump = false;
     private boolean last = false;
+
 
     @SubscribeEvent
     public void ChatReceivedEvent(ClientChatReceivedEvent event) {
