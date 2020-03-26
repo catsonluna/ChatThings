@@ -1,13 +1,14 @@
 package me.pinkulu.chatthings;
 
-import net.minecraft.client.Minecraft;
+import net.minecraft.command.ICommand;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 
-@Mod(modid = ChatThings.MODID, version = ChatThings.VERSION, name = ChatThings.NAME, acceptedMinecraftVersions = ChatThings.acceptedMineshaftVersions)
-public class ChatThings {
+@Mod(modid = Main.MODID, version = Main.VERSION, name = Main.NAME, acceptedMinecraftVersions = Main.acceptedMineshaftVersions)
+public class Main {
 
      static final String MODID = "ChatThings";
      static final String VERSION = "1.0 - snapshot";
@@ -23,6 +24,7 @@ public class ChatThings {
      private Back Back = new Back();
      private Left Left = new Left();
      private Crash Crash = new Crash();
+     private Commands Commands = new Commands();
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
@@ -35,5 +37,10 @@ public class ChatThings {
         MinecraftForge.EVENT_BUS.register(Right);
         MinecraftForge.EVENT_BUS.register(UseItem);
         MinecraftForge.EVENT_BUS.register(Crash);
+        MinecraftForge.EVENT_BUS.register(Commands);
+    }
+    @Mod.EventHandler
+    public void serverLoad(FMLServerStartingEvent event) {
+        event.registerServerCommand(new Commands());
     }
 }
