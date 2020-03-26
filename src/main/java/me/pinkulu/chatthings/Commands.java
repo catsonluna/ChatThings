@@ -4,14 +4,17 @@ import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.event.HoverEvent;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChatStyle;
+import net.minecraft.util.IChatComponent;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Commands implements ICommand {
+
 
 
     @Override
@@ -35,7 +38,10 @@ public class Commands implements ICommand {
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
         if (sender instanceof EntityPlayer){
             EntityPlayer player = (EntityPlayer) sender;
-            player.addChatMessage( new ChatComponentText("UwU"));
+            ChatStyle style = new ChatStyle();
+            style.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("This is a test")));
+            IChatComponent text = new ChatComponentText("hover me").setChatStyle(style);
+            player.addChatMessage(text);
         }
         
 
