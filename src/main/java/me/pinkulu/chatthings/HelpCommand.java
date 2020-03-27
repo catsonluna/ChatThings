@@ -16,7 +16,7 @@ public class HelpCommand extends CommandBase{
 
     @Override
     public String getCommandName() {
-        return "chatHelp";
+        return "chathelp";
     }
 
     @Override
@@ -27,7 +27,6 @@ public class HelpCommand extends CommandBase{
     @Override
     public List<String> getCommandAliases() {
         List<String> commandAliases = new ArrayList<String>();
-        commandAliases.add("chatTHelp");
         commandAliases.add("cth");
         return commandAliases;
     }
@@ -45,7 +44,7 @@ public class HelpCommand extends CommandBase{
                             "\n &3Extras:" +
                             "\n &dUwU" +
                             "\n &3Commands: " +
-                            "\n &b/chatHelp(chatTHelp, cth)" +
+                            "\n &b/chathelp(or /cth)" +
                             "\n &b/chat(keyword) <on/off>" +
                             "\n &b(example: /chatjump off(turns off keyword jump))"+
                             "\n &4More coming soon" +
@@ -56,27 +55,6 @@ public class HelpCommand extends CommandBase{
         
 
     }
-
-    @Override
-    public boolean canCommandSenderUseCommand(ICommandSender sender) {
-        return true;
-    }
-
-    @Override
-    public List<String> addTabCompletionOptions(ICommandSender sender, String[] args, BlockPos pos) {
-        return null;
-    }
-
-    @Override
-    public boolean isUsernameIndex(String[] args, int index) {
-        return false;
-    }
-
-    @Override
-    public int compareTo(ICommand o) {
-        return 0;
-    }
-
     @Override
     public int getRequiredPermissionLevel() {
         return 0;
