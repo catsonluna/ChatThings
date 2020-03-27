@@ -22,7 +22,6 @@ public class Main {
      private Right right = new Right();
      private Back back = new Back();
      private Left left = new Left();
-     private UwU uwu = new UwU();
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
@@ -34,7 +33,6 @@ public class Main {
         MinecraftForge.EVENT_BUS.register(left);
         MinecraftForge.EVENT_BUS.register(right);
         MinecraftForge.EVENT_BUS.register(useItem);
-        MinecraftForge.EVENT_BUS.register(uwu);
         ClientCommandHandler.instance.registerCommand(new HelpCommand());
         ClientCommandHandler.instance.registerCommand(new FrontToggle());
         ClientCommandHandler.instance.registerCommand(new BackToggle());
@@ -44,6 +42,5 @@ public class Main {
         ClientCommandHandler.instance.registerCommand(new SneakToggle());
         ClientCommandHandler.instance.registerCommand(new RightToggle());
         ClientCommandHandler.instance.registerCommand(new UseItemToggle());
-        ClientCommandHandler.instance.registerCommand(new UwUToggle());
     }
 }

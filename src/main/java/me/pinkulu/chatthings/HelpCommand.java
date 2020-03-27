@@ -38,12 +38,16 @@ public class HelpCommand extends CommandBase{
             ChatStyle style = new ChatStyle();
 
             style.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText(Util.replace(
-                       " &1Movement: " +
-                            "\n &9front, &9back, &9left, right " +
-                            "\n &1Actions: " +
-                            "\n &9Jump, sneak, useitem, drop" +
-                            "\n &1Extras:" +
-                            "\n &dUwU"+
+                       " &3Movement: " +
+                            "\n &bfront, back, left, right " +
+                            "\n &3Actions: " +
+                            "\n &bJump, sneak, useitem, drop" +
+                            "\n &3Extras:" +
+                            "\n &dUwU" +
+                            "\n &3Commands: " +
+                            "\n &b/chatHelp(chatTHelp, cth)" +
+                            "\n &b/chat(keyword) <on/off>" +
+                            "\n &b(example: /chatjump off(turns off keyword jump))"+
                             "\n &4More coming soon" +
                             "\n &5Mod made by:" +
                             "\n &dPinkulu"))));
