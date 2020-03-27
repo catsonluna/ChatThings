@@ -7,7 +7,6 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.event.HoverEvent;
 import net.minecraft.util.*;
-import me.pinkulu.chatthings.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,10 +42,12 @@ public class HelpCommand extends CommandBase{
                             "\n &9front, &9back, &9left, right " +
                             "\n &1Actions: " +
                             "\n &9Jump, sneak, useitem, drop" +
+                            "\n &1Extras:" +
+                            "\n &dUwU"+
                             "\n &4More coming soon" +
                             "\n &5Mod made by:" +
                             "\n &dPinkulu"))));
-            IChatComponent text = new ChatComponentText(Util.replace("&6v1.0&8&o(hoverable text)")).setChatStyle(style);
+            IChatComponent text = new ChatComponentText(Util.replace("&6v1.1&8&o(hoverable text)")).setChatStyle(style);
             player.addChatMessage(text);
         
 

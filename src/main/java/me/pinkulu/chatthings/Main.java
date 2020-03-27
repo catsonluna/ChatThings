@@ -1,6 +1,5 @@
 package me.pinkulu.chatthings;
 
-import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -38,5 +37,13 @@ public class Main {
         MinecraftForge.EVENT_BUS.register(uwu);
         ClientCommandHandler.instance.registerCommand(new HelpCommand());
         ClientCommandHandler.instance.registerCommand(new FrontToggle());
+        ClientCommandHandler.instance.registerCommand(new BackToggle());
+        ClientCommandHandler.instance.registerCommand(new DropToggle());
+        ClientCommandHandler.instance.registerCommand(new JumpToggle());
+        ClientCommandHandler.instance.registerCommand(new LeftToggle());
+        ClientCommandHandler.instance.registerCommand(new SneakToggle());
+        ClientCommandHandler.instance.registerCommand(new RightToggle());
+        ClientCommandHandler.instance.registerCommand(new UseItemToggle());
+        ClientCommandHandler.instance.registerCommand(new UwUToggle());
     }
 }
