@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HelpCommand extends CommandBase{
-
     // the first word in /
     @Override
     public String getCommandName() {
@@ -41,18 +40,23 @@ public class HelpCommand extends CommandBase{
             //hoverable text
                 style.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText(Util.replace(
                         " &3Movement: " +
-                                "\n&bfront, back, left, right " +
+                                "\n &" + (Movement.rightOn ? "a" : "c") + "Right, " +
+                                "&" + (Movement.leftOn ? "a" : "c") + "Left, " +
+                                "&" + (Movement.backOn ? "a" : "c") + "Back, " +
+                                "&" + (Movement.frontOn ? "a" : "c") + "Front " +
                                 "\n &3Actions: " +
-                                "\n &bJump, sneak, drop" +
-                                "\n &cExtras:" +
-                                "\n &cCrash" +
+                                "\n&" + (Actions.jumpOn ? "a" : "c") + " Jump, " +
+                                "&" + (Actions.dropOn ? "a" : "c") + "Drop, " +
+                                "&" + (Actions.sneakOn ? "a" : "c") + "Seak " +
+                                "\n &3Extras:" +
+                                "\n &" + (Extras.crashOn ? "a" : "c") + "Crash" +
                                 "\n &3Commands: " +
                                 "\n &b/chathelp(or/cth)" +
                                 "\n &b/chattoggle (keyword) <on/off>" +
                                 "\n &b(example: /chattoggle jump off(turns off keyword jump))" +
                                 "\n &4More coming soon" +
                                 "\n &5Mod made by:" +
-                                "\n &dPinkulu"))));
+                                "\n &dPinkulu" ))));
                 //what shows in chat and than the hoverable text is registered
             IChatComponent text = new ChatComponentText(Util.replace("&6v1.2&8&o(hoverable text)")).setChatStyle(style);
             //ads to chat
